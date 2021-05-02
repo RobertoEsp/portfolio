@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom properties*/
+:root {
+    --ff-primary: 'Source Code Pro', monospace;
+
+    --fw-reg: 400;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    --clr-light: #e5e5e5;
+    --clr-dark: #15202b;
+    --clr-accent: #8264b8;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,0.15);
+
+    --ts: 3px 3px 5px var(--clr-accent);
+
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;  
+    }
+}
+
+
+body {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-reg);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* header */
+
+.header {
+    background-color: black;
+    padding: .5rem 1rem;
+}
+.header__logo {
+    color: var(--clr-accent);
+    background-color: cecece;
+}
+
+/* section */
+.section {
+    margin: 1rem;
+}
+.section__title {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-reg);
+    margin-bottom: 5rem;
+}
+.section__title strong {
+    display: block;
+    text-shadow: var(--ts);
+    /* text-shadow: 1px 1px 2px var(--clr-accent); */
+
+}
+.section__subtitle {
+    font-size: var(--fs-h2); 
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-accent);
+}
+
+@media (min-width: 600px) {
+    .section {
+        min-width: 600px;
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
+.footer {
+    padding: 1rem;
+    background-color: black;
+    color: var(--clr-light);
+    margin-top: auto;
+}
+
+.footer i{
+    color: var(--clr-light);
+}
+
+.footer__links,
+.footer__cr {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link  + .footer__link {
+    margin-left: 2rem;
+}
