@@ -5,7 +5,9 @@
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "live": "live-server src --port=3030",
+    "dev": "live-server src --port=3030; npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
   },
   "author": "",
   "license": "ISC",
