@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./{src,tailwind}/*.html"],
+  content: ["./src/*.html"],
   theme: {
     fontFamily: {
       mono: ['Source Code Pro'],
