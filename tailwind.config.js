@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./docs/*.html"],
+  content: ["./docs/**/*.html"],
   theme: {
     fontFamily: {
       mono: ['Source Code Pro'],
