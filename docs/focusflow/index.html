@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../output.css">
+  <link rel="stylesheet" href="../output.min.css">
   <title>FocusFlow</title>
   <style>
     :root {
@@ -33,7 +33,7 @@
         const data = await response.json();
         if (data && data.length > 0) {
           const catContainer = document.getElementById('cat-container');
-          catContainer.innerHTML = `<img src="${data[0].url}" alt="Random cat" class="max-w-[70vw] max-h-[70vh] rounded-lg shadow-2xl my-8 object-contain" />`;
+          catContainer.innerHTML = `<img src="${data[0].url}" alt="Random cat" class="max-w-full max-h-[70vh] rounded-lg shadow-2xl my-8 object-contain" />`;
         }
       } catch (error) {
         console.error('Error fetching cat image:', error);

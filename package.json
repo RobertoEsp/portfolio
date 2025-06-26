@@ -5,7 +5,8 @@
   "main": "docs/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tail": "npx tailwindcss -i ./docs/input.css -o ./docs/output.css --watch",
+    "tail": "npx tailwindcss -i ./docs/input.css -o ./docs/output.min.css --watch",
+    "build": "npx tailwindcss -i ./docs/input.css -o ./docs/output.min.css --minify",
     "live": "live-server docs --port=3030 --no-browser --wait=100",
     "dev": "concurrently \"npm run tail\" \"npm run live\""
   },
